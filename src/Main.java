@@ -9,8 +9,8 @@ public class Main {
 
             // Tune to a specific frequency
             // Play first station
-            myRadio.changeVolume(0);
-            myRadio.tune(95.5);
+            myRadio.changeVolume(25);
+            myRadio.tune(90.5);
             Thread.sleep(10000);
 
             // Play second station

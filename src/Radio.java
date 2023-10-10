@@ -88,12 +88,17 @@ public class Radio {
 
                 // If exact match, play the station song
                 if (distance == 0) {
-                    soundPlayer.playAndLoop(stations.get(nearestStation));
+                    soundPlayer.play(stations.get(nearestStation), true);
                 } else {
                     // Play nearest station song but with added noise
                     // The closer to the station, the lesser the noise
-                    // For simplicity, this step is represented conceptually:
-                    soundPlayer.playWithNoise(stations.get(nearestStation), distance);
+
+                    // Convert distance to intensity
+                    float intensity = (float) distance / 10.0f; // Assuming maximum distance is 10.0
+                    if (intensity > 1.0f) intensity = 1.0f; // Clamp to 1.0
+
+                    // Now play the song with the calculated noise intensity
+                    soundPlayer.playWithNoise(stations.get(nearestStation), intensity, true);
                 }
 
             } else {
