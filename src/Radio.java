@@ -108,7 +108,6 @@ public class Radio {
                     // Now play the song with the calculated noise intensity
                     soundPlayer.playWithNoise(stations.get(nearestStation), intensity, true);
                 }
-
             } else {
                 System.out.println("Invalid frequency: " + newFrequency + " MHz. Must be between " + MIN_FREQUENCY + " and " + MAX_FREQUENCY + " MHz.");
             }

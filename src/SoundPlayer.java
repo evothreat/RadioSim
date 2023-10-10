@@ -56,11 +56,10 @@ public class SoundPlayer {
     // Method to play an audio stream
     private void playStream(AudioInputStream audioStream, boolean loop) {
         try {
-            if (clip != null && clip.isOpen()) {
-                clip.close();
-            }
+            stop();
             clip = AudioSystem.getClip();
             clip.open(audioStream);
+
             applyVolume();
 
             if (loop) {
@@ -97,8 +96,11 @@ public class SoundPlayer {
 
     // Method to stop the current audio clip
     public void stop() {
-        if (clip != null && clip.isRunning()) {
-            clip.stop();
+        if (clip != null && clip.isOpen()) {
+            if (clip.isRunning()) {
+                clip.stop();
+            }
+            clip.close();
         }
     }
 }
