@@ -39,6 +39,18 @@ public class Radio {
         System.out.println("Radio is now OFF");
     }
 
+    public boolean isOn() {
+        return isOn;
+    }
+
+    public double getFrequency() {
+        return frequency;
+    }
+
+    public int getVolume() {
+        return (int) (soundPlayer.getVolume() * 100);
+    }
+
     // Method to change the radio volume
     public void changeVolume(int newVolume) {
         if (isOn) {
@@ -50,15 +62,6 @@ public class Radio {
             }
         } else {
             System.out.println("Radio is off. Please turn it on to adjust the volume.");
-        }
-    }
-
-    // Method to get the current radio status
-    public void getStatus() {
-        System.out.println("Radio is " + (isOn ? "ON" : "OFF"));
-        if (isOn) {
-            System.out.println("Current Frequency: " + frequency + " MHz");
-            System.out.println("Volume Level: " + (int) (soundPlayer.getVolume() * 100));
         }
     }
 
