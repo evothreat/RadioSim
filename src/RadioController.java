@@ -5,9 +5,9 @@ import java.awt.event.*;
 
 public class RadioController {
 
-    private final Radio radioSim = new Radio();
-    private final JLabel statusLabel = new JLabel();
-    private final JLabel helpLabel = new JLabel();
+    private final Radio radioSim = new Radio(); // Radio object to simulate
+    private final JLabel statusLabel = new JLabel();  // Label to display radio status
+    private final JLabel helpLabel = new JLabel();  // Label to display help text
 
     public RadioController() {
         JFrame frame = new JFrame("RadioSim");
@@ -43,8 +43,6 @@ public class RadioController {
         frame.setVisible(true);
     }
 
-
-
     private void bindKeyWithAction(JPanel panel, int keyCode, String id, ActionListener action) {
         InputMap inputMap = panel.getInputMap(JPanel.WHEN_IN_FOCUSED_WINDOW);
         ActionMap actionMap = panel.getActionMap();
@@ -75,7 +73,6 @@ public class RadioController {
                 "O: Toggle radio ON/OFF" +
                 "</html>";
     }
-
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(RadioController::new);

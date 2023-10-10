@@ -9,8 +9,8 @@ public class Radio {
     private double frequency; // Current radio frequency
     private boolean isOn;     // Radio power state (On/Off)
 
-    private final SoundPlayer soundPlayer;
-    private final TreeMap<Double, String> stations;
+    private final SoundPlayer soundPlayer;  // Sound player object
+    private final TreeMap<Double, String> stations; // Map of stations with associated frequencies and song files
 
     // Constructor
     public Radio() {
@@ -33,19 +33,22 @@ public class Radio {
 
     // Method to turn off the radio
     public void turnOff() {
-        isOn = false;
         soundPlayer.stop(); // Stop any currently playing sound
+        isOn = false;
         System.out.println("Radio is now OFF");
     }
 
+    // Method to check if the radio is on
     public boolean isOn() {
         return isOn;
     }
 
+    // Method to get the current radio frequency
     public double getFrequency() {
         return frequency;
     }
 
+    // Method to get the current radio volume
     public int getVolume() {
         return (int) (soundPlayer.getVolume() * 100);
     }
@@ -64,6 +67,7 @@ public class Radio {
         }
     }
 
+    // Method to get the nearest station to a given frequency
     private double getNearestStation(double frequency) {
         // Find the nearest key (frequency) in the TreeMap
         Double lowerKey = stations.floorKey(frequency);
@@ -76,7 +80,7 @@ public class Radio {
         return (frequency - lowerKey < higherKey - frequency) ? lowerKey : higherKey;
     }
 
-    // Modify the tune method
+    // Method to tune the radio to a new frequency
     public void tune(double newFrequency) {
         soundPlayer.stop(); // Stop any currently playing sound
 
