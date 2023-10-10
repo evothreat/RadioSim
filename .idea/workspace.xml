@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb6ef64-b684-4b82-9e55-7458966f27a1" name="Changes" comment="refactor: use smaller type">
+    <list default="true" id="cdb6ef64-b684-4b82-9e55-7458966f27a1" name="Changes" comment="refactor: close clip on stop">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Radio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Radio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SoundPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SoundPlayer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +161,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696977110843</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="refactor: close clip on stop">
+      <option name="closed" value="true" />
+      <created>1696979138038</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1696979138038</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +184,7 @@
     <MESSAGE value="refactor: enable default station after start" />
     <MESSAGE value="refactor: add more comments" />
     <MESSAGE value="refactor: use smaller type" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: use smaller type" />
+    <MESSAGE value="refactor: close clip on stop" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: close clip on stop" />
   </component>
 </project>
