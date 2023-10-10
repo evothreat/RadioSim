@@ -14,9 +14,6 @@ public class Radio {
 
     // Constructor
     public Radio() {
-        frequency = MIN_FREQUENCY;  // Default frequency when the radio is turned on
-        isOn = false;      // Radio is initially off
-
         soundPlayer = new SoundPlayer();
 
         // Initialize stations map and add some frequencies with associated song files
@@ -30,12 +27,14 @@ public class Radio {
     // Method to turn on the radio
     public void turnOn() {
         isOn = true;
+        tune(MIN_FREQUENCY); // Tune to the default frequency
         System.out.println("Radio is now ON");
     }
 
     // Method to turn off the radio
     public void turnOff() {
         isOn = false;
+        soundPlayer.stop(); // Stop any currently playing sound
         System.out.println("Radio is now OFF");
     }
 

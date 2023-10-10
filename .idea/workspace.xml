@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb6ef64-b684-4b82-9e55-7458966f27a1" name="Changes" comment="feat: add basic gui" />
+    <list default="true" id="cdb6ef64-b684-4b82-9e55-7458966f27a1" name="Changes" comment="refactor: remove redundant tag">
+      <change beforePath="$PROJECT_DIR$/src/Radio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Radio.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,7 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1696945248169</updated>
       <workItem from="1696945249146" duration="5020000" />
-      <workItem from="1696951505714" duration="7800000" />
+      <workItem from="1696951505714" duration="8420000" />
     </task>
     <task id="LOCAL-00001" summary="Create basic project">
       <option name="closed" value="true" />
@@ -105,7 +107,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696959391037</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="refactor: remove redundant tag">
+      <option name="closed" value="true" />
+      <created>1696959554167</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696959554167</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +126,7 @@
     <MESSAGE value="feat: implement radio turn on/off, station &amp; volume adjustment" />
     <MESSAGE value="feat: implement playWithNoise" />
     <MESSAGE value="feat: add basic gui" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add basic gui" />
+    <MESSAGE value="refactor: remove redundant tag" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: remove redundant tag" />
   </component>
 </project>
