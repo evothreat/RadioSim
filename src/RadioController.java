@@ -60,9 +60,9 @@ public class RadioController {
     }
 
     private void updateStatusLabel() {
-        String status = "<html><font size=5>Radio is: " + (radioSim.isOn() ? "ON" : "OFF");
+        String status = "<html>Radio is: " + (radioSim.isOn() ? "ON" : "OFF");
         status += "<br>Current Frequency: " + radioSim.getFrequency() + " MHz";
-        status += "<br>Volume: " + radioSim.getVolume() + "%</font></html>";
+        status += "<br>Volume: " + radioSim.getVolume() + "%</html>";
         statusLabel.setText(status);
     }
 
