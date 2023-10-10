@@ -1,12 +1,12 @@
 import java.util.TreeMap;
 
 public class Radio {
-    private static final double MIN_FREQUENCY = 88.0; // Minimum allowable frequency in MHz
-    private static final double MAX_FREQUENCY = 108.0; // Maximum allowable frequency in MHz
+    private static final float MIN_FREQUENCY = 88.0f; // Minimum allowable frequency in MHz
+    private static final float MAX_FREQUENCY = 108.0f; // Maximum allowable frequency in MHz
     private static final int MIN_VOLUME = 0; // Minimum allowable volume level
     private static final int MAX_VOLUME = 100; // Maximum allowable volume level
 
-    private double frequency; // Current radio frequency
+    private float frequency; // Current radio frequency
     private boolean isOn;     // Radio power state (On/Off)
 
     private final SoundPlayer soundPlayer;  // Sound player object
@@ -18,10 +18,11 @@ public class Radio {
 
         // Initialize stations map and add some frequencies with associated song files
         stations = new TreeMap<>();
-        stations.put(88.5, "resources/eterna-cancao.wav");
-        stations.put(92.7, "resources/rock-doo-wop.wav");
-        stations.put(95.5, "resources/cumbia-mexican-banda.wav");
-        // Add more as necessary
+        stations.put(88.0, "resources/audio01.wav");
+        stations.put(93.0, "resources/audio02.wav");
+        stations.put(98.0, "resources/audio03.wav");
+        stations.put(103.0, "resources/audio04.wav");
+        stations.put(108.0, "resources/audio05.wav");
     }
 
     // Method to turn on the radio
@@ -44,7 +45,7 @@ public class Radio {
     }
 
     // Method to get the current radio frequency
-    public double getFrequency() {
+    public float getFrequency() {
         return frequency;
     }
 
@@ -81,7 +82,7 @@ public class Radio {
     }
 
     // Method to tune the radio to a new frequency
-    public void tune(double newFrequency) {
+    public void tune(float newFrequency) {
         soundPlayer.stop(); // Stop any currently playing sound
 
         if (isOn) {
@@ -100,7 +101,7 @@ public class Radio {
                     // The closer to the station, the lesser the noise
 
                     // Convert distance to intensity
-                    float intensity = (float) distance / 10.0f; // Assuming maximum distance is 10.0
+                    float intensity = (float) distance / 2.5f; // Assuming maximum distance is 2.5
                     if (intensity > 1.0f) intensity = 1.0f; // Clamp to 1.0
 
                     // Now play the song with the calculated noise intensity

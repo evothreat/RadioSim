@@ -16,10 +16,10 @@ public class RadioController {
 
         JPanel panel = new JPanel(new BorderLayout());
 
-        bindKeyWithAction(panel, KeyEvent.VK_UP, "increaseVolume", e -> radioSim.changeVolume(radioSim.getVolume() + 10));
-        bindKeyWithAction(panel, KeyEvent.VK_DOWN, "decreaseVolume", e -> radioSim.changeVolume(radioSim.getVolume() - 10));
-        bindKeyWithAction(panel, KeyEvent.VK_LEFT, "decreaseFrequency", e -> radioSim.tune(radioSim.getFrequency() - 0.5));
-        bindKeyWithAction(panel, KeyEvent.VK_RIGHT, "increaseFrequency", e -> radioSim.tune(radioSim.getFrequency() + 0.5));
+        bindKeyWithAction(panel, KeyEvent.VK_UP, "increaseVolume", e -> radioSim.changeVolume(radioSim.getVolume() + 2));
+        bindKeyWithAction(panel, KeyEvent.VK_DOWN, "decreaseVolume", e -> radioSim.changeVolume(radioSim.getVolume() - 2));
+        bindKeyWithAction(panel, KeyEvent.VK_LEFT, "decreaseFrequency", e -> radioSim.tune(radioSim.getFrequency() - 0.2f));
+        bindKeyWithAction(panel, KeyEvent.VK_RIGHT, "increaseFrequency", e -> radioSim.tune(radioSim.getFrequency() + 0.2f));
         bindKeyWithAction(panel, KeyEvent.VK_O, "togglePower", e -> {
             if (radioSim.isOn()) {
                 radioSim.turnOff();
@@ -59,7 +59,7 @@ public class RadioController {
 
     private void updateStatusLabel() {
         String status = "<html>Radio is: " + (radioSim.isOn() ? "ON" : "OFF");
-        status += "<br>Current Frequency: " + radioSim.getFrequency() + " MHz";
+        status += "<br>Current Frequency: " + String.format("%.2f", radioSim.getFrequency()) + " MHz";
         status += "<br>Volume: " + radioSim.getVolume() + "%</html>";
         statusLabel.setText(status);
     }
