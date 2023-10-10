@@ -10,7 +10,7 @@ public class Radio {
     private boolean isOn;     // Radio power state (On/Off)
 
     private final SoundPlayer soundPlayer;  // Sound player object
-    private final TreeMap<Double, String> stations; // Map of stations with associated frequencies and song files
+    private final TreeMap<Float, String> stations; // Map of stations with associated frequencies and song files
 
     // Constructor
     public Radio() {
@@ -18,11 +18,11 @@ public class Radio {
 
         // Initialize stations map and add some frequencies with associated song files
         stations = new TreeMap<>();
-        stations.put(88.0, "resources/audio01.wav");
-        stations.put(93.0, "resources/audio02.wav");
-        stations.put(98.0, "resources/audio03.wav");
-        stations.put(103.0, "resources/audio04.wav");
-        stations.put(108.0, "resources/audio05.wav");
+        stations.put(88.0f, "resources/audio01.wav");
+        stations.put(93.0f, "resources/audio02.wav");
+        stations.put(98.0f, "resources/audio03.wav");
+        stations.put(103.0f, "resources/audio04.wav");
+        stations.put(108.0f, "resources/audio05.wav");
     }
 
     // Method to turn on the radio
@@ -69,10 +69,10 @@ public class Radio {
     }
 
     // Method to get the nearest station to a given frequency
-    private double getNearestStation(double frequency) {
+    private float getNearestStation(float frequency) {
         // Find the nearest key (frequency) in the TreeMap
-        Double lowerKey = stations.floorKey(frequency);
-        Double higherKey = stations.ceilingKey(frequency);
+        Float lowerKey = stations.floorKey(frequency);
+        Float higherKey = stations.ceilingKey(frequency);
 
         if (lowerKey == null) return higherKey;
         if (higherKey == null) return lowerKey;
@@ -90,8 +90,8 @@ public class Radio {
                 frequency = newFrequency;
                 System.out.println("Tuned to " + frequency + " MHz");
 
-                double nearestStation = getNearestStation(frequency);
-                double distance = Math.abs(nearestStation - frequency);
+                float nearestStation = getNearestStation(frequency);
+                float distance = Math.abs(nearestStation - frequency);
 
                 // If exact match, play the station song
                 if (distance == 0) {
@@ -101,8 +101,9 @@ public class Radio {
                     // The closer to the station, the lesser the noise
 
                     // Convert distance to intensity
-                    float intensity = (float) distance / 2.5f; // Assuming maximum distance is 2.5
-                    if (intensity > 1.0f) intensity = 1.0f; // Clamp to 1.0
+                    // Assuming maximum distance is 2.5
+                    // Clamp to 1.0
+                    float intensity = Math.min(distance / 2.5f, 1.0f);
 
                     // Now play the song with the calculated noise intensity
                     soundPlayer.playWithNoise(stations.get(nearestStation), intensity, true);
