@@ -99,22 +99,17 @@ public class Radio {
             return;
         }
 
-        float oldFrequency = frequency;
-        frequency = newFrequency;
-
-        System.out.println("Tuned to " + frequency + " MHz");
-
-        float nearestStation = getNearestStation(frequency);
-
         // Stop the current audio clip if it is playing
         if (soundPlayer.isPlaying()) {
-            // If the nearest station is the same, store the current playback time
-            if (Float.compare(nearestStation, getNearestStation(oldFrequency)) == 0) {
-                stationProgress.put(nearestStation, soundPlayer.getPlaybackTime());
-            }
+            // Store the current playback time for the current station
+            stationProgress.put(getNearestStation(frequency), soundPlayer.getPlaybackTime());
             soundPlayer.stop();
         }
 
+        frequency = newFrequency;
+        System.out.println("Tuned to " + frequency + " MHz");
+
+        float nearestStation = getNearestStation(frequency);
         float distance = Math.abs(nearestStation - frequency);
 
         // If exact match, play the station song

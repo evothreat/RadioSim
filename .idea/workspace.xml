@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb6ef64-b684-4b82-9e55-7458966f27a1" name="Changes" comment="fix: using skip() requires additional offset calculation - use setMicrosecondPosition() instead">
+    <list default="true" id="cdb6ef64-b684-4b82-9e55-7458966f27a1" name="Changes" comment="fix: store playback time only if it belongs to the same station">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Radio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Radio.java" afterDir="false" />
     </list>
@@ -103,7 +103,7 @@
       <workItem from="1696980053129" duration="531000" />
       <workItem from="1696981848648" duration="4038000" />
       <workItem from="1696986054183" duration="2846000" />
-      <workItem from="1697035796481" duration="1364000" />
+      <workItem from="1697035796481" duration="2090000" />
     </task>
     <task id="LOCAL-00001" summary="Create basic project">
       <option name="closed" value="true" />
@@ -217,7 +217,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696988286015</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="fix: store playback time only if it belongs to the same station">
+      <option name="closed" value="true" />
+      <created>1697037543868</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1697037543868</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +247,7 @@
     <MESSAGE value="refactor: use microseconds for playbacktime" />
     <MESSAGE value="refactor: use milliseconds for playbacktime" />
     <MESSAGE value="fix: using skip() requires additional offset calculation - use setMicrosecondPosition() instead" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: using skip() requires additional offset calculation - use setMicrosecondPosition() instead" />
+    <MESSAGE value="fix: store playback time only if it belongs to the same station" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: store playback time only if it belongs to the same station" />
   </component>
 </project>
