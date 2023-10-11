@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb6ef64-b684-4b82-9e55-7458966f27a1" name="Changes" comment="feat: store station progress">
+    <list default="true" id="cdb6ef64-b684-4b82-9e55-7458966f27a1" name="Changes" comment="refactor: adjust parameters">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RadioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RadioController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SoundPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SoundPlayer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +101,8 @@
       <workItem from="1696945249146" duration="5020000" />
       <workItem from="1696951505714" duration="11430000" />
       <workItem from="1696980053129" duration="531000" />
-      <workItem from="1696981848648" duration="3639000" />
+      <workItem from="1696981848648" duration="4038000" />
+      <workItem from="1696986054183" duration="1016000" />
     </task>
     <task id="LOCAL-00001" summary="Create basic project">
       <option name="closed" value="true" />
@@ -192,7 +192,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696984087086</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="refactor: adjust parameters">
+      <option name="closed" value="true" />
+      <created>1696985665057</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1696985665057</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,6 +218,7 @@
     <MESSAGE value="refactor: close clip on stop" />
     <MESSAGE value="README.md" />
     <MESSAGE value="feat: store station progress" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: store station progress" />
+    <MESSAGE value="refactor: adjust parameters" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: adjust parameters" />
   </component>
 </project>
