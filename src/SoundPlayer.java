@@ -56,10 +56,11 @@ public class SoundPlayer {
     // Method to play an audio stream
     private void playStream(AudioInputStream audioStream, int startAt, boolean loop) {
         try {
-            audioStream.skip(startAt * 1000);
+            stop();
 
             clip = AudioSystem.getClip();
             clip.open(audioStream);
+            clip.setMicrosecondPosition(startAt * 1000);
 
             applyVolume();
 
@@ -97,7 +98,7 @@ public class SoundPlayer {
 
     // Method to get the current playback time
     public int getPlaybackTime() {
-        return clip != null && clip.isOpen() ? (int) clip.getMicrosecondPosition() / 1000 : 0;
+        return clip != null && clip.isOpen() ? (int) (clip.getMicrosecondPosition() / 1000) : 0;
     }
 
     // Method to check if the current audio clip is playing
