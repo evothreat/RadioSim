@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb6ef64-b684-4b82-9e55-7458966f27a1" name="Changes" comment="refactor: use milliseconds for playbacktime">
+    <list default="true" id="cdb6ef64-b684-4b82-9e55-7458966f27a1" name="Changes" comment="fix: using skip() requires additional offset calculation - use setMicrosecondPosition() instead">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Radio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Radio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SoundPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SoundPlayer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +102,8 @@
       <workItem from="1696951505714" duration="11430000" />
       <workItem from="1696980053129" duration="531000" />
       <workItem from="1696981848648" duration="4038000" />
-      <workItem from="1696986054183" duration="1796000" />
+      <workItem from="1696986054183" duration="2846000" />
+      <workItem from="1697035796481" duration="1364000" />
     </task>
     <task id="LOCAL-00001" summary="Create basic project">
       <option name="closed" value="true" />
@@ -209,7 +209,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696987220529</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fix: using skip() requires additional offset calculation - use setMicrosecondPosition() instead">
+      <option name="closed" value="true" />
+      <created>1696988286015</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1696988286015</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,6 +238,7 @@
     <MESSAGE value="refactor: adjust parameters" />
     <MESSAGE value="refactor: use microseconds for playbacktime" />
     <MESSAGE value="refactor: use milliseconds for playbacktime" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: use milliseconds for playbacktime" />
+    <MESSAGE value="fix: using skip() requires additional offset calculation - use setMicrosecondPosition() instead" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: using skip() requires additional offset calculation - use setMicrosecondPosition() instead" />
   </component>
 </project>
