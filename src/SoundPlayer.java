@@ -9,7 +9,7 @@ public class SoundPlayer {
 
     // Constructor
     public SoundPlayer() {
-        volume = 0.75f;
+        volume = 0.50f;
     }
 
     // Method to play a sound file

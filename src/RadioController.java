@@ -16,10 +16,10 @@ public class RadioController {
 
         JPanel panel = new JPanel(new BorderLayout());
 
-        bindKeyWithAction(panel, KeyEvent.VK_UP, "increaseVolume", e -> radioSim.changeVolume(radioSim.getVolume() + 2));
-        bindKeyWithAction(panel, KeyEvent.VK_DOWN, "decreaseVolume", e -> radioSim.changeVolume(radioSim.getVolume() - 2));
-        bindKeyWithAction(panel, KeyEvent.VK_LEFT, "decreaseFrequency", e -> radioSim.tune(radioSim.getFrequency() - 0.2f));
-        bindKeyWithAction(panel, KeyEvent.VK_RIGHT, "increaseFrequency", e -> radioSim.tune(radioSim.getFrequency() + 0.2f));
+        bindKeyWithAction(panel, KeyEvent.VK_UP, "increaseVolume", e -> radioSim.changeVolume(radioSim.getVolume() + 5));
+        bindKeyWithAction(panel, KeyEvent.VK_DOWN, "decreaseVolume", e -> radioSim.changeVolume(radioSim.getVolume() - 5));
+        bindKeyWithAction(panel, KeyEvent.VK_LEFT, "decreaseFrequency", e -> radioSim.tune(radioSim.getFrequency() - 0.5f));
+        bindKeyWithAction(panel, KeyEvent.VK_RIGHT, "increaseFrequency", e -> radioSim.tune(radioSim.getFrequency() + 0.5f));
         bindKeyWithAction(panel, KeyEvent.VK_O, "togglePower", e -> {
             if (radioSim.isOn()) {
                 radioSim.turnOff();

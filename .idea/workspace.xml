@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb6ef64-b684-4b82-9e55-7458966f27a1" name="Changes" comment="README.md">
+    <list default="true" id="cdb6ef64-b684-4b82-9e55-7458966f27a1" name="Changes" comment="feat: store station progress">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Radio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Radio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RadioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RadioController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SoundPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SoundPlayer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +102,7 @@
       <workItem from="1696945249146" duration="5020000" />
       <workItem from="1696951505714" duration="11430000" />
       <workItem from="1696980053129" duration="531000" />
-      <workItem from="1696981848648" duration="2025000" />
+      <workItem from="1696981848648" duration="3639000" />
     </task>
     <task id="LOCAL-00001" summary="Create basic project">
       <option name="closed" value="true" />
@@ -184,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696980402569</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="feat: store station progress">
+      <option name="closed" value="true" />
+      <created>1696984087086</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1696984087086</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +209,7 @@
     <MESSAGE value="refactor: use smaller type" />
     <MESSAGE value="refactor: close clip on stop" />
     <MESSAGE value="README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="README.md" />
+    <MESSAGE value="feat: store station progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: store station progress" />
   </component>
 </project>
