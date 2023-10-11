@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb6ef64-b684-4b82-9e55-7458966f27a1" name="Changes" comment="refactor: close clip on stop">
+    <list default="true" id="cdb6ef64-b684-4b82-9e55-7458966f27a1" name="Changes" comment="README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Radio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Radio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SoundPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SoundPlayer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +37,9 @@
         <option name="url" value="https://github.com/evothreat/RadioSim.git" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -96,6 +101,8 @@
       <updated>1696945248169</updated>
       <workItem from="1696945249146" duration="5020000" />
       <workItem from="1696951505714" duration="11430000" />
+      <workItem from="1696980053129" duration="531000" />
+      <workItem from="1696981848648" duration="2025000" />
     </task>
     <task id="LOCAL-00001" summary="Create basic project">
       <option name="closed" value="true" />
@@ -169,7 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696979138038</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="README.md">
+      <option name="closed" value="true" />
+      <created>1696980402569</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1696980402569</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +200,7 @@
     <MESSAGE value="refactor: add more comments" />
     <MESSAGE value="refactor: use smaller type" />
     <MESSAGE value="refactor: close clip on stop" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: close clip on stop" />
+    <MESSAGE value="README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="README.md" />
   </component>
 </project>

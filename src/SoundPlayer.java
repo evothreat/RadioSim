@@ -13,11 +13,11 @@ public class SoundPlayer {
     }
 
     // Method to play a sound file
-    public void play(String filename, boolean loop) {
+    public void play(String filename, int startAt, boolean loop) {
         URL url = getClass().getResource(filename);
         try {
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(url);
-            playStream(audioIn, loop);
+            playStream(audioIn, startAt, loop);
         } catch (UnsupportedAudioFileException | IOException e) {
             e.printStackTrace();
         }
@@ -25,7 +25,7 @@ public class SoundPlayer {
 
     // Method to play a sound file with added noise
     // noiseIntensity is a float between 0.0f (no noise) and 1.0f (full noise)
-    public void playWithNoise(String filename, float noiseIntensity, boolean loop) {
+    public void playWithNoise(String filename, float noiseIntensity, int startAt, boolean loop) {
         if (noiseIntensity < 0f || noiseIntensity > 1f) {
             throw new IllegalArgumentException("Noise intensity value must be between 0 and 1");
         }
@@ -44,7 +44,7 @@ public class SoundPlayer {
             ByteArrayInputStream mixedInputStream = new ByteArrayInputStream(songBytes);
             AudioInputStream mixedStream = new AudioInputStream(mixedInputStream, songStream.getFormat(), songBytes.length / songStream.getFormat().getFrameSize());
 
-            playStream(mixedStream, loop);
+            playStream(mixedStream, startAt, loop);
 
             songStream.close();
         } catch (UnsupportedAudioFileException | IOException e) {
@@ -54,9 +54,11 @@ public class SoundPlayer {
 
 
     // Method to play an audio stream
-    private void playStream(AudioInputStream audioStream, boolean loop) {
+    private void playStream(AudioInputStream audioStream, int startAt, boolean loop) {
         try {
             stop();
+
+            audioStream.skip(startAt);
             clip = AudioSystem.getClip();
             clip.open(audioStream);
 
@@ -92,6 +94,16 @@ public class SoundPlayer {
     // Method to get the current volume
     public float getVolume() {
         return volume;
+    }
+
+    // Method to get the current playback time
+    public int getPlaybackTime() {
+        return clip != null && clip.isOpen() ? (int) clip.getMicrosecondPosition() : 0;
+    }
+
+    // Method to check if the current audio clip is playing
+    public boolean isPlaying() {
+        return clip != null && clip.isOpen() && clip.isRunning();
     }
 
     // Method to stop the current audio clip
