@@ -8,4 +8,4 @@ This project offers a basic emulation of a traditional radio system, implemented
 - **Station Emulation**: Simulates radio stations with individual audio tracks.
 - **Signal Interference**: As users deviate from a station's core frequency, the software introduces static interference, mimicking real-world radio behaviors.
 - **Volume Management**: Adjust the audio output level as needed.
-- **GUI**: A user-friendly interface with buttons and menus for easy interaction.
+- **User-Friendly Interface**: Navigate seamlessly using hotkeys for interaction.
